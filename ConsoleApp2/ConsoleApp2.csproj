@@ -1,10 +1,25 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+﻿using System;
 
-  <PropertyGroup>
-    <OutputType>Exe</OutputType>
-    <TargetFramework>net10.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
-  </PropertyGroup>
+class Program
+{
+    static void Main()
+    {
+        Console.WriteLine("=== Number Challenge (1 to 20) ===");
 
-</Project>
+        for (int i = 1; i <= 20; i++)
+        {
+            if (i == 15)
+            {
+                Console.WriteLine("Reached 15 -> Stopping loop (break).");
+                break;
+            }
+
+            if (i % 2 == 0)
+            {
+                continue;
+            }
+
+            Console.WriteLine(i);
+        }
+    }
+}
